@@ -1,0 +1,264 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Starter Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href='{% static "js/bootstrap/bootstrap.min.css" %}' rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+        body {
+          padding-top: 5rem;
+        }
+        .starter-template {
+          padding: 3rem 1.5rem;
+          text-align: center;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="javascript:location.href='{% url 'home' %}'">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" onclick="javascript:location.href='/calculadora'">Calculadora do Enem<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main role="main" class="container-fluid">
+
+  <div class="starter-template">
+
+
+    <h4>Calculadora de nota no ENEM </h4>
+    <h5>Responda as questões a seguir conforme a orientação de possíveis respostas. Para respostas do tipo "1 ou 0", considere 1 para sim e 0 para não. Para respostas do tipo "1, 2, 3 ou 4", considere 1 para muito baixo e 4 para muito alto. </h5>
+        <div class="form-group row">
+            <label class="col-sm-8 col-form-label">Qual a renda mensal (em R$) somada de todas as pessoas que vivem em seu domicílio?</label>
+            <div class="col-sm-4">
+              <input id="renda_per_capita_1" type="text" placeholder="Ex: 2500" class="form-control"/>
+            </div>
+            <label class="col-sm-8 col-form-label">Quantas pessoas, incluindo você, vivem em seu domicílio?</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="renda_per_capita_2" placeholder="Número 1, 2 , 3 ..." value="1">
+            </div>
+
+            <label class="col-sm-8 col-form-label">Você fez o ensino médio numa escola pública estadual ou municipal?</label>
+            <div class="col-sm-4">
+                Sim <input id="ind_esc_pub_e_m_s" name="ind_esc_pub_e_m" type="radio" value="1" checked/>
+                Não <input id="ind_esc_pub_e_m_n" name="ind_esc_pub_e_m" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">No seu domicílio há algum computador?</label>
+            <div class="col-sm-4">
+                Sim <input id="Q024_A_s" name="Q024_A" type="radio" value="1" checked/>
+                Não <input id="Q024_A_n" name="Q024_A" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">Qual a sua idade?</label>
+            <div class="col-sm-4">
+              <input id="NU_IDADE" type="text" placeholder="16" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">No seu domicílio há acesso à internet?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q025_A_s" name="Q025_A" type="radio" value="1" checked/>
+              Não <input id="Q025_A_n" name="Q025_A" type="radio" value="0" />
+            </div>
+
+
+            <label class="col-sm-8 col-form-label">No seu domicílio há freezer?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q013_A_s" name="Q013_A" type="radio" value="1" checked/>
+              Não <input id="Q013_A_n" name="Q013_A" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">No seu domicílio há empregado(a) doméstico(a)?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q007_A_s" name="Q007_A" type="radio" value="1" checked/>
+              Não <input id="Q007_A_n" name="Q007_A" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">Há telefone fixo na sua residência?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q023_A_s" name="Q023_A" type="radio" value="1" checked/>
+              Não <input id="Q023_A_n" name="Q023_A" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">Você fez o ensino médio numa escola privada?</label>
+            <div class="col-sm-4">
+              Sim <input id="TP_DEPENDENCIA_ADM_ESC_x_4_s" name="TP_DEPENDENCIA_ADM_ESC_x_4" type="radio" value="1" checked/>
+              Não <input id="TP_DEPENDENCIA_ADM_ESC_x_4_" name="TP_DEPENDENCIA_ADM_ESC_x_4" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">A profissão da sua mãe é médica, advogada, engenheira ou ecomomista?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q004_E_s" name="Q004_E" type="radio" value="1" checked/>
+              Não <input id="Q004_E_n" name="Q004_E" type="radio" value="0" />
+            </div>
+
+
+            <label class="col-sm-8 col-form-label">Qual o nível de disponibilidade de equipamentos multimídia na sua escola?</label>
+            <div class="col-sm-4">
+              Ruim <input id="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil_1" name="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil" type="radio" value="1" checked/>
+              Regular <input id="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil_2" name="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil" type="radio" value="2" />
+              Bom <input id="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil_3" name="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil" type="radio" value="3" />
+              Ótimo <input id="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil_4" name="NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil" type="radio" value="4" />
+            </div>
+
+
+            <label class="col-sm-8 col-form-label">A profissão da sua mãe é professora, policial de baixa patente ou autônoma?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q004_D_s" name="Q004_D" type="radio" value="1" checked/>
+              Não <input id="Q004_D_n" name="Q004_D" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">Há telefone celular na sua residência?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q022_B_s" name="Q022_B" type="radio" value="1" checked/>
+              Não <input id="Q022_B_n" name="Q022_B" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label"> A profissão do sua pai é lavrador, agricultor sem empregados, bóia fria, criador de animais?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q003_A_s" name="Q003_A" type="radio" value="1" checked/>
+              Não <input id="Q003_A_n" name="Q003_A" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">A profissão do sua pai é professor, policial de baixa patente ou autônomo?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q003_D_s" name="Q003_D" type="radio" value="1" checked/>
+              Não <input id="Q003_D_n" name="Q003_D" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">A profissão do sua pai é médico, advogado, engenheiro ou ecomomista?</label>
+            <div class="col-sm-4">
+              Sim <input id="Q003_E_s" name="Q003_E" type="radio" value="1" checked/>
+              Não <input id="Q003_E_n" name="Q003_E" type="radio" value="0" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">Num grau de 1 a 4, qual o nível de lotação da sua sala de aula no ensino médio?</label>
+            <div class="col-sm-4">
+              Tranquilo <input id="num_alunos_por_SALA_classe_quartil_1" name="num_alunos_por_SALA_classe_quartil" type="radio" value="1" checked/>
+              Pouco Lotado <input id="num_alunos_por_SALA_classe_quartil_2" name="num_alunos_por_SALA_classe_quartil" type="radio" value="2" />
+              Lotado <input id="num_alunos_por_SALA_classe_quartil_3" name="num_alunos_por_SALA_classe_quartil" type="radio" value="3"/>
+              Muito Lotado <input id="num_alunos_por_SALA_classe_quartil_4" name="num_alunos_por_SALA_classe_quartil" type="radio" value="4" />
+            </div>
+
+            <label class="col-sm-8 col-form-label">Num grau de 1 a 4, qual o seu nível de preparo pro ENEM?</label>
+            <div class="col-sm-4">
+              Tranquilo <input id="empenho_1" name="empenho" type="radio" value="1" checked/>
+              Pouco Lotado <input id="empenho_2" name="empenho" type="radio" value="2" />
+              Lotado <input id="empenho_3" name="empenho" type="radio" value="3"/>
+              Muito Lotado <input id="empenho_4" name="empenho" type="radio" value="4" />
+            </div>
+
+        </div>
+
+        <input type="button"  value="Calcular a Previsão de sua Nota" onclick="javascript:return calcular();" />
+        <div id="div_nota" style="display:none;">
+            <h2 id="nota"></h2>
+        </div>
+  </div>
+
+</main><!-- /.container -->
+
+  <script src='{% static "js/jquery/jquery-3.3.1.min.js" %}'></script>
+  <script src='{% static "js/bootstrap/bootstrap.bundle.min.js" %}'></script>
+
+  <script>
+    $( document ).ready(function(){
+      console.log('Teste: pronto')
+    });
+
+    function calcular(){
+      parametros = {
+        'renda_per_capita_1': Number(document.getElementById("renda_per_capita_1").value),
+        'renda_per_capita_2': Number(document.getElementById("renda_per_capita_2").value),
+        'ind_esc_pub_e_m': Number($("input[name='ind_esc_pub_e_m']:checked"). val()),
+        'Q024_A': Number($("input[name='Q024_A']:checked"). val()),
+        'NU_IDADE': Number(document.getElementById("NU_IDADE").value),
+        'Q025_A': Number($("input[name='Q025_A']:checked"). val()),
+        'Q013_A': Number($("input[name='Q013_A']:checked"). val()),
+        'Q007_A': Number($("input[name='Q007_A']:checked"). val()),
+        'NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil': Number($("input[name='NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil']:checked"). val()),
+        'Q023_A': Number($("input[name='Q023_A']:checked"). val()),
+        'TP_DEPENDENCIA_ADM_ESC_x_4': Number($("input[name='TP_DEPENDENCIA_ADM_ESC_x_4']:checked"). val()),
+        'Q004_E': Number($("input[name='Q004_E']:checked"). val()),
+        'Q004_D': Number($("input[name='Q004_D']:checked"). val()),
+        'Q003_A': Number($("input[name='Q003_A']:checked"). val()),
+        'Q003_D': Number($("input[name='Q003_D']:checked"). val()),
+        'Q003_E': Number($("input[name='Q003_E']:checked"). val()),
+        'Q022_B': Number($("input[name='Q022_B']:checked"). val()),
+        'num_alunos_por_SALA_classe_quartil': Number($("input[name='num_alunos_por_SALA_classe_quartil']:checked"). val()),
+        'empenho': Number($("input[name='empenho']:checked"). val()),
+      }
+
+        /*
+      parametros = {
+        'renda_per_capita_1': 0,
+        'renda_per_capita_2': 1,
+        'ind_esc_pub_e_m':0,
+        'Q024_A': 0,
+        'NU_IDADE': 0,
+        'Q025_A': 0,
+        'Q013_A': 0,
+        'Q007_A': 0,
+        'NU_EQUIP_MULTIMIDIA_por_aluno_classe_quartil': 0,
+        'Q023_A': 0,
+        'TP_DEPENDENCIA_ADM_ESC_x_4': 0,
+        'Q004_E': 0,
+        'Q004_D': 0,
+        'Q003_A': 0,
+        'Q003_D': 0,
+        'Q003_E': 0,
+        'Q022_B': 0,
+        'num_alunos_por_SALA_classe_quartil': 1,
+        'empenho': 1,
+      }
+      */
+
+      $.get('{% url 'calculadora/calcular' %}', parametros).done(function(data){
+        console.log(data);
+        $('#nota').html(data['resultado']);
+        $('#div_nota').css('display', 'block');
+      });
+
+      return false;
+    }
+  </script>
+
+</body>
+</html>

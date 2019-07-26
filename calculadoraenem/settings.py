@@ -25,7 +25,7 @@ SECRET_KEY = 'aninz98jcygrb53y^=pq8+v3!4zyqfl$y$yp%68^4pabs#wj75'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'ljsales.pythonanywhere.com']
+ALLOWED_HOSTS = [u'ljsales.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'calculadora.apps.CalculadoraConfig',
 ]
 
 MIDDLEWARE = [
